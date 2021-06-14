@@ -1,0 +1,29 @@
+{
+    "name": "parad0xe/exam_poo",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "parad0xe/php-simple-framework-core": "^1.0",
+		"ext-pdo": "*"
+	},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "libs/php-simple-framework-core"
+        }
+    ],
+    "scripts": {
+        "framework:install": "composer run framework:core:install && composer run framework:assets:install",
+        "framework:core:install": "composer dump-autoload && mkdir libs && git -C libs clone https://github.com/parad0xe/php-simple-framework-core.git && composer require parad0xe/php-simple-framework-core",
+        "framework:assets:install": "cp -R libs/php-simple-framework-core/assets/* .",
+        "framework:update": "rm -rf libs/php-simple-framework-core && git -C libs clone https://github.com/parad0xe/php-simple-framework-core.git"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}

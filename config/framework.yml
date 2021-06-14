@@ -1,0 +1,25 @@
+app:
+  id: "dqz846khi846gvs8397zdq684ku"
+  dev: true
+
+  directory:
+    root: "%root%"
+    public: "%root%"
+    pages: "%root%/pages"
+
+  endpoints:
+    home: "home:index"
+    auth:
+      login: "auth:login"
+      logout: "auth:logout"
+
+  database:
+    database: "exam_poo"
+    host: "localhost"
+    user: "app"
+    password: "app"
+    port: 3306
+    connect_database: true
+
+  cookie:
+    first_connection: "fc"
