@@ -65,7 +65,9 @@ user 2:
 - password: demo
 ```
 
-> No use of SQL JOIN because the fetch mode used does not extend over several classes.
+> No use of SQL JOIN CLAUSE because the fetch mode used does not extend over several classes.\
+> (But use of constraint key for implicit joins)
+
 
 ## Usage
 
